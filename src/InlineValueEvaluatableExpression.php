@@ -16,8 +16,8 @@ class InlineValueEvaluatableExpression
 {
     /**
      * The document range for which the inline value applies.
-	 * The range is used to extract the evaluatable expression from the
-	 * underlying document.
+     * The range is used to extract the evaluatable expression from the
+     * underlying document.
      *
      * @var Range|null
      */
@@ -25,7 +25,7 @@ class InlineValueEvaluatableExpression
 
     /**
      * If specified the expression overrides the extracted expression.
-     * 
+     *
      * @var string|null
      */
     public $expression;

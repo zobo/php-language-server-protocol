@@ -16,8 +16,8 @@ class InlineValueVariableLookup
 {
     /**
      * The document range for which the inline value applies.
-	 * The range is used to extract the variable name from the underlying
-	 * document.
+     * The range is used to extract the variable name from the underlying
+     * document.
      *
      * @var Range|null
      */
@@ -25,14 +25,14 @@ class InlineValueVariableLookup
 
     /**
      * If specified the name of the variable to look up.
-     * 
+     *
      * @var string|null
      */
     public $variableName;
 
     /**
      *  How to perform the lookup.
-     * 
+     *
      * @var bool|null
      */
     public $caseSensitiveLookup;
@@ -43,13 +43,14 @@ class InlineValueVariableLookup
      * @param bool|null $caseSensitiveLookup caseSensitiveLookup
      */
     public function __construct(
-        ?\InlineValueVariableLookup\Range $range = null,
+        ?\LanguageServerProtocol\Range $range = null,
         ?string $variableName = null,
         ?bool $caseSensitiveLookup = null
     ) {
         /** @psalm-suppress PossiblyNullPropertyAssignmentValue */
         $this->range = $range;
         $this->variableName = $variableName;
+        /** @psalm-suppress PossiblyNullPropertyAssignmentValue */
         $this->caseSensitiveLookup = $caseSensitiveLookup;
     }
 }
