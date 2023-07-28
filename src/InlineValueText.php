@@ -4,7 +4,7 @@ namespace LanguageServerProtocol;
 
 /**
  * Provide inline value as text.
- * 
+ *
  * @since 3.17.0
  */
 class InlineValueText
@@ -18,7 +18,7 @@ class InlineValueText
 
     /**
      * The text of the inline value.
-     * 
+     *
      * @var string
      */
     public $text;
@@ -31,6 +31,7 @@ class InlineValueText
     {
         /** @psalm-suppress PossiblyNullPropertyAssignmentValue */
         $this->range = $range;
+        /** @psalm-suppress PossiblyNullPropertyAssignmentValue */
         $this->text = $text;
     }
 }

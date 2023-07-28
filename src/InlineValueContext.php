@@ -16,21 +16,22 @@ class InlineValueContext
 
     /**
      * The document range where execution has stopped.
-	 * Typically the end position of the range denotes the line where the
-	 * inline values are shown.
+     * Typically the end position of the range denotes the line where the
+     * inline values are shown.
      *
      * @var Range
      */
     public $stoppedLocation;
 
     /**
-     * @param string|MarkedString|string[]|MarkedString[]|MarkupContent $frameId stack frame Id
+     * @param int $frameId stack frame Id
      * @param Range $stoppedLocation Range
      */
     public function __construct($frameId = null, $stoppedLocation = null)
     {
         /** @psalm-suppress PossiblyNullPropertyAssignmentValue */
         $this->frameId = $frameId;
+        /** @psalm-suppress PossiblyNullPropertyAssignmentValue */
         $this->stoppedLocation = $stoppedLocation;
     }
 }
