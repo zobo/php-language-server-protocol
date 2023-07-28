@@ -207,6 +207,15 @@ class TextDocumentClientCapabilities
      */
     public $moniker;
 
+    /**
+     * Capabilities specific to the `textDocument/inlineValue` request.
+     *
+     * @since 3.17.0
+     *
+     * @var InlineValueClientCapabilities|null
+     */
+    public $inlineValue;
+
     public function __construct(
         TextDocumentSyncClientCapabilities $synchronization = null,
         CompletionClientCapabilities $completion = null,
@@ -233,7 +242,8 @@ class TextDocumentClientCapabilities
         LinkedEditingRangeClientCapabilities $linkedEditingRange = null,
         CallHierarchyClientCapabilities $callHierarchy = null,
         SemanticTokensClientCapabilities $semanticTokens = null,
-        MonikerClientCapabilities $moniker = null
+        MonikerClientCapabilities $moniker = null,
+        InlineValueClientCapabilities $inlineValue = null,
     ) {
         $this->synchronization = $synchronization;
         $this->completion = $completion;
@@ -261,5 +271,6 @@ class TextDocumentClientCapabilities
         $this->callHierarchy = $callHierarchy;
         $this->semanticTokens = $semanticTokens;
         $this->moniker = $moniker;
+        $this->inlineValue = $inlineValue;
     }
 }
