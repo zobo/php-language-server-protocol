@@ -243,7 +243,7 @@ class TextDocumentClientCapabilities
         CallHierarchyClientCapabilities $callHierarchy = null,
         SemanticTokensClientCapabilities $semanticTokens = null,
         MonikerClientCapabilities $moniker = null,
-        InlineValueClientCapabilities $inlineValue = null,
+        InlineValueClientCapabilities $inlineValue = null
     ) {
         $this->synchronization = $synchronization;
         $this->completion = $completion;
