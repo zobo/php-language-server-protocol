@@ -32,6 +32,8 @@ jobs:
           php-version: ${{ matrix.php }}
           extensions: ${{ matrix.xdebug }}, ast
           tools: composer
+      - name: Php Lint
+        uses: michaelw90/PHP-Lint@master
       - name: Composer Install
         run: COMPOSER_ROOT_VERSION=dev-master composer install --prefer-dist --no-interaction
       - name: phpcs
