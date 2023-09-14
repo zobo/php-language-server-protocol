@@ -2,6 +2,7 @@
 
 namespace LanguageServerProtocol;
 
+#[\AllowDynamicProperties]
 class ServerCapabilities
 {
     /**
